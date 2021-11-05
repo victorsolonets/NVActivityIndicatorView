@@ -268,6 +268,7 @@ public final class NVActivityIndicatorPresenter {
         containerView.backgroundColor = activityData.backgroundColor
         containerView.restorationIdentifier = restorationIdentifier
         containerView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.isUserInteractionEnabled = false
         fadeInAnimation?(containerView)
 
         let activityIndicatorView = NVActivityIndicatorView(
@@ -278,6 +279,7 @@ public final class NVActivityIndicatorPresenter {
 
         activityIndicatorView.startAnimating()
         activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicatorView.isUserInteractionEnabled = false
         containerView.addSubview(activityIndicatorView)
 
         // Add constraints for `activityIndicatorView`.
